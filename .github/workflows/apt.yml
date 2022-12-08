@@ -31,7 +31,7 @@ jobs:
           - label: Ubuntu Jammy amd64
             rake-job: ubuntu-jammy
             test-docker-image: ubuntu:jammy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
       - name: Install dependencies

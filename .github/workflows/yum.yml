@@ -36,7 +36,7 @@ jobs:
             rake-job: amazonlinux-2022
             test-docker-image: amazonlinux:2022
             centos-stream: false
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
       - name: Install dependencies

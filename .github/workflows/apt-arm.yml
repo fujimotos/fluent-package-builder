@@ -33,7 +33,7 @@ jobs:
             rake-job: ubuntu-jammy
             rake-options: LINTIAN=no
             test-docker-image: arm64v8/ubuntu:jammy
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@master
       - name: Install dependencies
