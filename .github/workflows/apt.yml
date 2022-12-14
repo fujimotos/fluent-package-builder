@@ -44,11 +44,11 @@ jobs:
         with:
           name: packages-${{ matrix.rake-job }}
           path: td-agent/apt/repositories/**/td-agent_*.deb
-      - name: Upload td-agent-apt-source deb
+      - name: Upload fluentd-apt-source deb
         uses: actions/upload-artifact@master
         with:
           name: packages-apt-source-${{ matrix.rake-job }}
-          path: td-agent-apt-source/apt/repositories
+          path: fluentd-apt-source/apt/repositories/**/*.deb
       - name: Check Package Size
         run: |
           td-agent/apt/pkgsize-test.sh ${{ matrix.rake-job }} amd64
