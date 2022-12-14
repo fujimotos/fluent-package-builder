@@ -47,7 +47,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: packages-${{ matrix.rake-job }}
-          path: td-agent/yum/repositories
+          path: td-agent/yum/repositories/**/Packages/td-agent-[0-9]*.rpm
       - name: Check Package Size
         run: |
           td-agent/yum/pkgsize-test.sh ${{ matrix.rake-job }} x86_64

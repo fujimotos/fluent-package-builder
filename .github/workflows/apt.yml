@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: packages-${{ matrix.rake-job }}
-          path: td-agent/apt/repositories
+          path: td-agent/apt/repositories/**/td-agent_*.deb
       - name: Upload td-agent-apt-source deb
         uses: actions/upload-artifact@master
         with:
